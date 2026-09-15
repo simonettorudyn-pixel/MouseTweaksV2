@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "mouse-tweaks-v2",
+	"version": "${version}",
+	"name": "Mouse Tweaks V2",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mouse-tweaks-v2/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mousetweaksv2.MouseTweaksV2"
+		],
+		"client": [
+			"com.mousetweaksv2.client.MouseTweaksV2Client"
+		]
+	},
+	"mixins": [
+		"mouse-tweaks-v2.mixins.json",
+		{
+			"config": "mouse-tweaks-v2.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
